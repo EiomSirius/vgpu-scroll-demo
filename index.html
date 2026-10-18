@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#05060f" />
+    <meta name="description" content="Deriva — un viaje de scroll con shaders WebGPU hechos con vgpu." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <title>Deriva — scroll con WebGPU</title>
+  </head>
+  <body>
+    <canvas id="gl"></canvas>
+    <div id="progress"></div>
+
+    <main>
+      <section class="hero" data-scene="0">
+        <div class="copy">
+          <p class="kicker">vgpu · WebGPU</p>
+          <h1>Deriva</h1>
+          <p class="sub">Cuatro paisajes de luz generados en tu GPU, en tiempo real. Desliza y mira cómo el mundo cambia.</p>
+          <div class="scroll-hint"><span>Desliza</span><span class="line"></span></div>
+        </div>
+      </section>
+
+      <section data-scene="0">
+        <div class="copy">
+          <p class="kicker">01</p>
+          <h2>Aurora</h2>
+          <p class="sub">Cortinas de luz que respiran despacio, tejidas con ruido fractal en cada fotograma.</p>
+        </div>
+      </section>
+
+      <section data-scene="1">
+        <div class="copy">
+          <p class="kicker">02</p>
+          <h2>Magma</h2>
+          <p class="sub">El scroll enciende la tierra: brasas a la deriva y vetas de calor que laten.</p>
+        </div>
+      </section>
+
+      <section data-scene="2">
+        <div class="copy">
+          <p class="kicker">03</p>
+          <h2>Nebulosa</h2>
+          <p class="sub">Un remolino violeta con estrellas que parpadean. Sigue bajando, casi amanece.</p>
+        </div>
+      </section>
+
+      <section data-scene="3">
+        <div class="copy">
+          <p class="kicker">04</p>
+          <h2>Amanecer</h2>
+          <p class="sub">Luz dorada sobre el horizonte. Todo esto lo calcula tu móvil, 60 veces por segundo.</p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="copy">
+          <p><strong>Fin de la deriva</strong>Hecho con vgpu · WebGPU · sin fotogramas pregrabados</p>
+        </div>
+      </footer>
+    </main>
+
+    <div id="fallback">
+      <div class="box">
+        <h2>Tu navegador no tiene WebGPU</h2>
+        <p>Esta demo necesita WebGPU para dibujar en tiempo real. Prueba con Chrome o Edge actualizado en Android, o Safari 26+ en iPhone.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
